@@ -7,7 +7,7 @@ dtrace:::BEGIN
 {
   system("afplay ./sounds/shortintro.m4a &");
   trace_count = 0;
-  limit = $1 != 0 ? limit_arg : 100;
+  limit = $1 != 0 ? $1 : 100;
 }
 syscall:::entry
 {
