@@ -12,7 +12,7 @@ dtrace:::BEGIN
 syscall:::entry
 {
   trace_count += 1;
-  number = rand() % 55;
+  number = rand() % 33;
   system("afplay ./sounds/bee%i.mp3 &", number);
 }
 syscall:::entry
